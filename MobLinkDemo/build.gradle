@@ -72,7 +72,10 @@ dependencies {
         debugCompile project(path: ':MobLink', configuration: 'debug')
     } else {
         MobSDK {
-            MobLink {version = "2.2.1"}
+            MobLink {
+                // 使用经典版
+                preferClassicalEdition true
+            }
         }
     }
     compile fileTree(include: ['*.jar'], dir: 'libs')
